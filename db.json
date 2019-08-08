@@ -6,6 +6,13 @@
       "attention": false,
       "date": "03-02-2019",
       "tech": "Sam Smith"
+    },
+    {
+      "id": 2,
+      "message": "Workstation 003 is up",
+      "attention": true,
+      "date": "03-02-2019",
+      "tech": "Sam Smith"
     }
   ],
   "tech": [
