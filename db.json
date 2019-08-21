@@ -1,25 +1,18 @@
 {
   "logs": [
     {
-      "id": 1,
-      "message": "Workstation 007 is down",
+      "message": "New log",
       "attention": false,
-      "date": "03-02-2019",
-      "tech": "Sam Smith"
+      "tech": "Sam Smith",
+      "date": "2019-08-21T09:26:44.594Z",
+      "id": 1
     },
     {
-      "id": 2,
-      "message": "Workstation 003 is up",
-      "attention": true,
-      "date": "03-02-2019",
-      "tech": "Sam Smith"
-    },
-    {
-      "message": "Test log",
+      "message": "Test att log",
       "attention": true,
       "tech": "Sam Smith",
-      "date": "2019-08-21T09:10:54.992Z",
-      "id": 3
+      "date": "2019-08-21T09:27:05.895Z",
+      "id": 2
     }
   ],
   "tech": [
