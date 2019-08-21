@@ -1,18 +1,18 @@
 {
   "logs": [
     {
-      "message": "New log",
-      "attention": false,
-      "tech": "Sam Smith",
-      "date": "2019-08-21T09:26:44.594Z",
-      "id": 1
-    },
-    {
+      "id": 2,
       "message": "Test att log",
       "attention": true,
       "tech": "Sam Smith",
-      "date": "2019-08-21T09:27:05.895Z",
-      "id": 2
+      "date": "2019-08-21T13:51:29.452Z"
+    },
+    {
+      "id": 3,
+      "message": "dddfsdf",
+      "attention": false,
+      "tech": "Jon Doe",
+      "date": "2019-08-21T13:51:44.331Z"
     }
   ],
   "tech": [

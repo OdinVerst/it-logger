@@ -1,20 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import {upadateLog} from '../../actions/logActions'
 import M from 'materialize-css/dist/js/materialize.min.js';
 
-const EditLogModal = () => {
+const EditLogModal = ({upadateLog, current}) => {
   const [message, setMessage] = useState('');
-  const [attantion, setAttantion] = useState(false);
+  const [attention, setAttention] = useState(false);
   const [tech, setTech] = useState('');
+
+
+  useEffect(()=> {
+    if(current){
+      setMessage(current.message);
+      setAttention(current.attention);
+      setTech(current.tech)
+    }
+  }, [current])
 
   const onSubmit = () => {
     if (message === '' || tech === '') {
       M.toast({ html: 'Please enter message and tech' });
     }
-    console.log('Submit');
+    const updLog = {
+      id: current.id,
+      message,
+      attention,
+      tech,
+      date: new Date()
+    }
 
+    upadateLog(updLog);
+    M.toast({ html: `Log updated by ${tech}` });
     //Clear Fields
     setMessage('');
-    setAttantion('');
+    setAttention('');
     setTech('');
   };
 
@@ -30,20 +49,17 @@ const EditLogModal = () => {
               value={message}
               onChange={e => setMessage(e.target.value)}
             />
-            <label htmlFor="message" className="active">
-              Log message
-            </label>
           </div>
         </div>
         <div className="row">
           <div className="input-field">
             <select
-              type="text"
               name="tech"
+              className="browser-default"
               value={tech}
               onChange={e => setTech(e.target.value)}
             >
-              <option value="">Select tech</option>
+              <option value="" disabled>Select tech</option>
               <option value="Sam Smith">Sam Smith</option>
               <option value="Jon Doe">Jon Doe</option>
             </select>
@@ -55,11 +71,12 @@ const EditLogModal = () => {
               <input
                 type="checkbox"
                 className="field-in"
-                name="attantion"
-                value={attantion}
-                onChange={e => setAttantion(!attantion)}
+                name="attention"
+                checked={attention}
+                value={attention}
+                onChange={e => setAttention(!attention)}
               />
-              <span>Need Attantion</span>
+              <span>Need Attention</span>
             </label>
           </p>
         </div>
@@ -80,4 +97,9 @@ const EditLogModal = () => {
 const modalStyle = {
   width: '75%'
 };
-export default EditLogModal;
+
+const mapStateToProps = (state) => ({
+  current: state.log.current
+});
+
+export default connect(mapStateToProps, {upadateLog})(EditLogModal);
