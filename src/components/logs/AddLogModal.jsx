@@ -6,7 +6,7 @@ import M from 'materialize-css/dist/js/materialize.min.js';
 
 const AddLogModal = ({addLog}) => {
   const [message, setMessage] = useState('');
-  const [attantion, setAttantion] = useState(false);
+  const [attention, setAttention] = useState(false);
   const [tech, setTech] = useState('');
 
   const onSubmit = () => {
@@ -16,18 +16,17 @@ const AddLogModal = ({addLog}) => {
 
     const newLog = {
       message,
-      attantion,
+      attention,
       tech,
       date: new Date()
     }
-    console.log(1);
     addLog(newLog);
     M.toast({ html: `Add new log wiht ${tech}` });
 
     }
     //Clear Fields
     setMessage('');
-    setAttantion('');
+    setAttention('');
     setTech('');
   };
 
@@ -68,11 +67,11 @@ const AddLogModal = ({addLog}) => {
               <input
                 type="checkbox"
                 className="field-in"
-                name="attantion"
-                value={attantion}
-                onChange={e => setAttantion(!attantion)}
+                name="attention"
+                value={attention}
+                onChange={e => setAttention(!attention)}
               />
-              <span>Need Attantion</span>
+              <span>Need Attention</span>
             </label>
           </p>
         </div>

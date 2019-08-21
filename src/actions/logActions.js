@@ -15,7 +15,6 @@ export const getLogs = () => async dispatch => {
 };
 
 export const addLog = (log) => async dispatch => {
-    console.log(1);
     try {
         setLoading();
 

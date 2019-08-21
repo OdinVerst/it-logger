@@ -15,10 +15,10 @@
       "tech": "Sam Smith"
     },
     {
-      "message": "sdffdsf",
-      "attantion": false,
+      "message": "Test log",
+      "attention": true,
       "tech": "Sam Smith",
-      "date": "2019-08-20T16:58:15.877Z",
+      "date": "2019-08-21T09:10:54.992Z",
       "id": 3
     }
   ],
