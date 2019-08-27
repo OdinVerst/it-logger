@@ -3,7 +3,6 @@ import { SET_LOADING, GET_TECHS, TECHS_ERROR } from './types';
 
 export const getTechs = () => async dispatch => {
     try {
-        console.log(1);
         setLoading();
 
         const res = await fetch('/tech');
