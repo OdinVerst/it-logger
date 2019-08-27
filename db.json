@@ -20,16 +20,6 @@
       "id": 1,
       "firstName": "Sam",
       "lastName": "Smith"
-    },
-    {
-      "firstName": "Test",
-      "lastName": "User",
-      "id": 2
-    },
-    {
-      "firstName": "Sam",
-      "lastName": "Smuth",
-      "id": 3
     }
   ]
 }
