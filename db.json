@@ -1,13 +1,6 @@
 {
   "logs": [
     {
-      "id": 2,
-      "message": "Test att log",
-      "attention": true,
-      "tech": "Sam Smith",
-      "date": "2019-08-21T13:51:29.452Z"
-    },
-    {
       "id": 3,
       "message": "dddfsdf",
       "attention": false,
